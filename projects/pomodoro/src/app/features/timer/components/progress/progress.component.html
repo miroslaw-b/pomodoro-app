@@ -1,0 +1,17 @@
+<div class="progress" [style.width]="size() + 'px'">
+  @for (part of parts(); track part.uid) {
+    <div
+      class="progress__step"
+      [style.width]="calculatePercentage(part.uid) + '%'"
+    >
+      <pom-part
+        (click)="handleClickStep(part.uid)"
+        [passedTime]="part.passedTime"
+        [totalTime]="part.totalTime"
+        [isActive]="part.isActive"
+        [label]="part.label"
+        [kind]="part.kind"
+      />
+    </div>
+  }
+</div>

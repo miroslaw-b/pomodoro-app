@@ -1,0 +1,10 @@
+<form [formGroup]="form" (submit)="handleSubmitForm()" class="form">
+  @for (partControl of partsControl.controls; track partControl) {
+    <pom-part [control]="partControl" (delete)="handleDeletePart($index)" />
+  }
+
+  <div class="form__actions">
+    <button mat-button (click)="handleAddPart()" type="button">Add</button>
+    <button mat-flat-button type="submit">Save</button>
+  </div>
+</form>

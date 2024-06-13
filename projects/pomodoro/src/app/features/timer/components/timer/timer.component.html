@@ -1,0 +1,24 @@
+<div class="timer">
+  <mat-progress-spinner
+    mode="determinate"
+    [value]="progress()"
+    [diameter]="size()"
+    [strokeWidth]="15"
+  />
+
+  <div
+    class="timer__content"
+    [style.width]="size() + 'px'"
+    [style.height]="size() + 'px'"
+    [style.border-width]="'5px'"
+  >
+    <div class="timer__kind">
+      {{ kind() || '---' }}
+    </div>
+    <h2 class="timer__time-left">{{ timeLeft() }}</h2>
+    <div class="timer__ends-at">{{ endsAt() }}</div>
+    <div class="timer__navigation">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

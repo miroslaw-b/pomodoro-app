@@ -1,0 +1,9 @@
+<div
+  class="part"
+  [class.part--active]="isActive()"
+  [matTooltip]="label()"
+  matTooltipPosition="above"
+>
+  <mat-progress-bar mode="determinate" [value]="progress()"></mat-progress-bar>
+  <div class="part__point"></div>
+</div>

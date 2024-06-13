@@ -1,0 +1,33 @@
+<div class="navigation">
+  @switch (mode()) {
+    @case ('idle') {
+      <button
+        (click)="action.emit('start')"
+        mat-mini-fab
+        class="navigation__start"
+      >
+        <mat-icon fontIcon="play_arrow" />
+      </button>
+    }
+
+    @case ('pause') {
+      <button
+        (click)="action.emit('start')"
+        mat-mini-fab
+        class="navigation__start"
+      >
+        <mat-icon fontIcon="play_arrow" />
+      </button>
+    }
+
+    @case ('play') {
+      <button
+        (click)="action.emit('pause')"
+        mat-icon-button
+        class="navigation__pause"
+      >
+        <mat-icon fontIcon="pause" />
+      </button>
+    }
+  }
+</div>

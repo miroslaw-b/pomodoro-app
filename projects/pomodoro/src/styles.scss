@@ -1,0 +1,31 @@
+@use '@angular/material' as mat;
+
+
+// Define the theme object.
+$pomodoro-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$violet-palette,
+    tertiary: mat.$magenta-palette,
+  ),
+  typography: (use-system-variables: true),
+  density: (
+    scale: 0,
+  )
+));
+
+@include mat.core();
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  @include mat.system-level-colors($pomodoro-theme);
+  @include mat.system-level-typography($pomodoro-theme);
+  @include mat.all-component-themes($pomodoro-theme);
+}
+
+@include mat.typography-hierarchy($pomodoro-theme);
+

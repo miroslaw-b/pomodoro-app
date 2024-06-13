@@ -1,0 +1,23 @@
+<div class="timer-page">
+  <pom-timer
+    [passedTime]="partPassedTime()"
+    [scheduledTime]="partTotalTime()"
+    [kind]="partKind()"
+    [size]="size"
+  >
+    @if (currentPartSession(); as currentStep) {
+      <pom-navigation
+        [mode]="currentStep.mode"
+        (action)="handleActionNavigation($event)"
+      />
+    }
+  </pom-timer>
+
+  @if (sessionParts(); as sessionSteps) {
+    <pom-progress
+      [parts]="sessionSteps"
+      (changeStep)="handleChangeStep($event)"
+      [size]="size"
+    />
+  }
+</div>

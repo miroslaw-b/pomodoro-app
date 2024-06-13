@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+@use '../../../../../../styles' as styles;
+
+.part {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  mat-form-field {
+    flex: 1 1 auto;
+  }
+
+  &__delete {
+    @include mat.icon-button-overrides(
+      (
+        icon-color: mat.get-theme-color(styles.$pomodoro-theme, error),
+        icon-size: 32px,
+        state-layer-size: 32px,
+      )
+    );
+
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+  }
+}

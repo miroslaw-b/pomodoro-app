@@ -1,0 +1,8 @@
+@use '@angular/material' as mat;
+@use '../../../../../styles' as styles;
+
+.navigation {
+  &__start {
+    @include mat.button-color(styles.$pomodoro-theme, $color-variant: tertiary);
+  }
+}

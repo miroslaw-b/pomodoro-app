@@ -1,0 +1,9 @@
+.progress {
+  display: flex;
+  flex-direction: row;
+
+  &__step {
+    display: flex;
+    flex-grow: 1;
+  }
+}

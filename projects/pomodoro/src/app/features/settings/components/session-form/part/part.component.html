@@ -1,0 +1,38 @@
+<div class="part">
+  <mat-form-field>
+    <mat-label>Order</mat-label>
+    <input matInput type="number" [formControl]="orderControl" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Label</mat-label>
+    <input matInput type="text" [formControl]="labelControl" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Duration</mat-label>
+    <input matInput type="number" [formControl]="durationControl" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Kind</mat-label>
+    <mat-select [formControl]="kindControl">
+      <mat-option [value]="SessionPartKind.Pomodoro">
+        {{ SessionPartKind.Pomodoro }}
+      </mat-option>
+
+      <mat-option [value]="SessionPartKind.Rest">
+        {{ SessionPartKind.Rest }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button
+    mat-icon-button
+    class="part__delete"
+    (click)="handleDeletePart()"
+    type="button"
+  >
+    <mat-icon inline>delete</mat-icon>
+  </button>
+</div>

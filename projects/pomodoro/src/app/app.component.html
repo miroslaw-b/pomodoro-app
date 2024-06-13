@@ -1,0 +1,19 @@
+<div class="navigation">
+  <mat-nav-list>
+    <a routerLink="/timer" class="navigation__item" mat-list-item>
+      <mat-icon matListItemIcon>timer</mat-icon>
+    </a>
+
+    <div class="navigation__spacer"></div>
+
+    <a routerLink="/settings" class="navigation__item" mat-list-item>
+      <mat-icon matListItemIcon>settings</mat-icon>
+    </a>
+  </mat-nav-list>
+</div>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav-content class="container__content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
